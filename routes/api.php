@@ -3,7 +3,6 @@
 use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\Auth\ResetPasswordController;
-use App\Http\Controllers\Api\Auth\SocialLoginController;
 use App\Http\Controllers\Api\Auth\VerificationController;
 use App\Http\Controllers\Api\QuoteController;
 use App\Http\Middleware\Authenticate;
