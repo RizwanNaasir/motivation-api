@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\Auth\ResetPasswordController;
 use App\Http\Controllers\Api\Auth\VerificationController;
 use App\Http\Controllers\Api\QuoteController;
+use App\Http\Controllers\Api\StoryController;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Route;
 
@@ -34,15 +35,21 @@ Route::post('user/send/verification/mail', [VerificationController::class, 'send
 Route::middleware([
     Authenticate::using(guard: 'sanctum'),
 ])->as('api')->group(function () {
-    Route::group(['prefix' => 'quote','as' => 'quote'], function () {
+    Route::group(['prefix' => 'quote', 'as' => 'quote'], function () {
 
         Route::get('list', [QuoteController::class, 'index'])->name('list');
         Route::post('refresh', [QuoteController::class, 'fetchAndSaveQuotes'])->name('quote');
         Route::post('like/{quote}', [QuoteController::class, 'like'])->name('like');
     });
+    Route::group(['prefix' => 'story', 'as' => 'story'], function () {
 
-    Route::group(['prefix' => 'favourite','as' => 'favourite'], function () {
+        Route::get('list', [StoryController::class, 'index'])->name('list');
+        Route::post('like/{story}', [StoryController::class, 'like'])->name('like');
+    });
+
+    Route::group(['prefix' => 'favourite', 'as' => 'favourite'], function () {
 
         Route::get('list-quotes', [QuoteController::class, 'listFavouriteQuotes'])->name('quote.list');
+        Route::get('list-stories', [StoryController::class, 'listFavouriteStories'])->name('story.list');
     });
 });

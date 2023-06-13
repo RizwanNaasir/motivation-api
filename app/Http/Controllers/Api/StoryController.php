@@ -11,7 +11,10 @@ class StoryController extends Controller
 {
     public function index()
     {
-        return StoryResource::collection(Story::all());
+        return $this->success(data: StoryResource::collection(Story::paginate(
+            perPage: request()->integer('perPage', 5),
+            page: request()->integer('page', 1)
+        )));
     }
 
     public function store(StoryRequest $request)
@@ -36,5 +39,20 @@ class StoryController extends Controller
         $story->delete();
 
         return response()->json();
+    }
+
+    public function like(Story $story)
+    {
+        $user = request()->user();
+        if ($user->addToFavouriteStories($story)) {
+            return $this->success(message: 'Story added to Favourite!');
+        } else {
+            return $this->success(message: 'Story removed from Favourite!');
+        }
+    }
+
+    public function listFavouriteStories()
+    {
+        return $this->success(data: StoryResource::collection(request()->user()->favoriteStories));
     }
 }

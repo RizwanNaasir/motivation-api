@@ -59,14 +59,21 @@ class User extends Authenticatable implements
         return $this->belongsToMany(Quote::class, 'favorite_quotes');
     }
 
-    public function favoriteStories(): HasMany
+    public function favoriteStories(): BelongsToMany
     {
-        return $this->hasMany(FavoriteStory::class);
+        return $this->belongsToMany(Story::class, 'favorite_stories');
     }
 
     public function addToFavouriteQuotes(Quote $quote): bool
     {
         $isFavorite = $this->favoriteQuotes()->toggle($quote);
+
+        return count($isFavorite['attached']) > 0;
+    }
+
+    public function addToFavouriteStories(Story $story): bool
+    {
+        $isFavorite = $this->favoriteStories()->toggle($story);
 
         return count($isFavorite['attached']) > 0;
     }
