@@ -22,7 +22,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(['prefix' => 'auth'], function () {
     Route::post('login', LoginController::class)->name('api.login');
-    Route::post('social/login', SocialLoginController::class)->name('api.social.login');
     Route::post('register', RegisterController::class)->name('api.register');
     Route::post('logout', [LoginController::class, 'logout'])->middleware('auth:sanctum')->name('api.logout');
     Route::post('update', [LoginController::class, 'update'])->name('api.update');

@@ -1,4 +1,3 @@
-@extends('layouts.app')
 @section('content')
 {{--@include('layouts.header')--}}
 <main class="mx-auto flex w-full max-w-7xl flex-grow flex-col px-4 sm:px-6 lg:px-8">
