@@ -1,0 +1,12 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "socket": "soketi start"
+    },
+    "devDependencies": {
+    },
+    "dependencies": {
+    }
+}
