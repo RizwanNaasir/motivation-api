@@ -2,10 +2,11 @@
 
 namespace App\Http\Resources\Api;
 
+use App\Models\Quote;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
-/** @mixin \App\Models\Quote */
+/** @mixin Quote */
 class QuoteResource extends JsonResource
 {
     public function toArray(Request $request): array
@@ -19,6 +20,7 @@ class QuoteResource extends JsonResource
             'length' => $this->length,
             'created_at' => $this->created_at->diffForHumans(),
             'updated_at' => $this->updated_at->diffForHumans(),
+            'is_liked' => $this->is_favorite,
         ];
     }
 }

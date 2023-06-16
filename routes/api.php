@@ -6,6 +6,7 @@ use App\Http\Controllers\Api\Auth\ResetPasswordController;
 use App\Http\Controllers\Api\Auth\VerificationController;
 use App\Http\Controllers\Api\QuoteController;
 use App\Http\Controllers\Api\StoryController;
+use App\Http\Controllers\Api\UserController;
 use App\Http\Middleware\Authenticate;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +36,11 @@ Route::post('user/send/verification/mail', [VerificationController::class, 'send
 Route::middleware([
     Authenticate::using(guard: 'sanctum'),
 ])->as('api')->group(function () {
+    Route::group(['prefix' => 'user', 'as' => 'user'], function () {
+        Route::get('profile', [UserController::class, 'profile'])->name('profile');
+    });
+
+
     Route::group(['prefix' => 'quote', 'as' => 'quote'], function () {
 
         Route::get('list', [QuoteController::class, 'index'])->name('list');
