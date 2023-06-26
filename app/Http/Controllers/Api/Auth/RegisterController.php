@@ -12,8 +12,8 @@ class RegisterController extends Controller
     public function __invoke(RegisterRequest $request): JsonResponse
     {
         $user = User::query()->create([
-            'f_name' => $request->input('f_name'),
-            'l_name' => $request->input('l_name'),
+            'name' => $request->input('name', ''),
+            'surname' => $request->input('surname', ''),
             'email' => $request->input('email'),
             'password' => bcrypt($request->input('password')),
         ]);
