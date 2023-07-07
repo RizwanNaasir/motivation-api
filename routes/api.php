@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\Auth\LoginController;
 use App\Http\Controllers\Api\Auth\RegisterController;
 use App\Http\Controllers\Api\Auth\ResetPasswordController;
 use App\Http\Controllers\Api\Auth\VerificationController;
+use App\Http\Controllers\Api\GoalController;
 use App\Http\Controllers\Api\QuoteController;
 use App\Http\Controllers\Api\StoryController;
 use App\Http\Controllers\Api\UserController;
@@ -58,4 +59,6 @@ Route::middleware([
         Route::get('list-quotes', [QuoteController::class, 'listFavouriteQuotes'])->name('quote.list');
         Route::get('list-stories', [StoryController::class, 'listFavouriteStories'])->name('story.list');
     });
+
+    Route::apiResource('goal', GoalController::class);
 });

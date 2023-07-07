@@ -77,4 +77,9 @@ class User extends Authenticatable implements
 
         return count($isFavorite['attached']) > 0;
     }
+
+    public function goals(): HasMany
+    {
+        return $this->hasMany(Goal::class);
+    }
 }
