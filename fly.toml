@@ -15,7 +15,7 @@ PHP_VERSION = "8.2"
 [deploy]
 
 [env]
-APP_ENV = "production"
+APP_ENV = "local"
 DB_CONNECTION = "pgsql"
 DB_DATABASE = "motivation"
 DB_HOST = "muddy-sunset-1330.internal"

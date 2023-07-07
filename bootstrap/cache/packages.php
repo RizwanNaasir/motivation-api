@@ -1,46 +1,53 @@
 <?php return array (
-  'dedoc/scramble' => 
+  'dedoc/scramble' =>
   array (
-    'providers' => 
+    'providers' =>
     array (
-      0 => 'Dedoc\\Scramble\\ScrambleServiceProvider',
+        0 => 'Dedoc\\Scramble\\ScrambleServiceProvider',
     ),
   ),
-  'laravel/sanctum' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Laravel\\Sanctum\\SanctumServiceProvider',
-    ),
-  ),
-  'nesbot/carbon' => 
-  array (
-    'providers' => 
-    array (
-      0 => 'Carbon\\Laravel\\ServiceProvider',
-    ),
-  ),
-  'nunomaduro/collision' => 
-  array (
-    'providers' => 
+    'laravel/sanctum' =>
+        array(
+            'providers' =>
+                array(
+                    0 => 'Laravel\\Sanctum\\SanctumServiceProvider',
+                ),
+        ),
+    'laravel/telescope' =>
+        array(
+            'providers' =>
+                array(
+                    0 => 'Laravel\\Telescope\\TelescopeServiceProvider',
+                ),
+        ),
+    'nesbot/carbon' =>
+        array(
+            'providers' =>
+                array(
+                    0 => 'Carbon\\Laravel\\ServiceProvider',
+                ),
+        ),
+    'nunomaduro/collision' =>
+        array(
+            'providers' =>
     array (
       0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
     ),
   ),
-  'nunomaduro/termwind' => 
+  'nunomaduro/termwind' =>
   array (
-    'providers' => 
+    'providers' =>
     array (
       0 => 'Termwind\\Laravel\\TermwindServiceProvider',
     ),
   ),
-  'spatie/laravel-ignition' => 
+  'spatie/laravel-ignition' =>
   array (
-    'providers' => 
+    'providers' =>
     array (
       0 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
     ),
-    'aliases' => 
+    'aliases' =>
     array (
       'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
     ),
