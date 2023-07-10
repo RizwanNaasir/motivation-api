@@ -15,6 +15,7 @@ class StoryResource extends JsonResource
             'id' => $this->id,
             'title' => $this->title,
             'content' => $this->content,
+            'is_liked' => $this->is_favorite,
         ];
     }
 }
