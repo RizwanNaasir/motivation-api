@@ -9,8 +9,8 @@ return new class extends Migration {
     {
         Schema::create('favorite_quotes', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('quote_id');
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
+            $table->foreignId('quote_id')->constrained('quotes')->cascadeOnDelete();
             $table->timestamps();
         });
     }
