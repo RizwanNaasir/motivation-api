@@ -9,6 +9,7 @@ use App\Http\Controllers\Api\QuoteController;
 use App\Http\Controllers\Api\StoryController;
 use App\Http\Controllers\Api\UserController;
 use App\Http\Middleware\Authenticate;
+use App\Models\Product;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,4 +62,9 @@ Route::middleware([
     });
 
     Route::apiResource('goal', GoalController::class);
+});
+
+Route::get('products', function (){
+    $product = Product::all();
+    return $product;
 });
