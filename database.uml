@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>DATABASE</ID>
+  <OriginalElement>4e48829a-835f-49a1-b0de-92d64ddc06e4.SCHEMA:y_style_new.public</OriginalElement>
+  <nodes>
+    <node x="-142.24577373211963" y="230.21261378413527">4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.favorite_stories</node>
+    <node x="521.0" y="-108.5">4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.quotes</node>
+    <node x="547.9284785435631" y="226.5">4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.favorite_quotes</node>
+    <node x="-152.443433029909" y="-31.676202860858268">4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.stories</node>
+    <node x="320.96423927178154" y="238.0">4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.notes</node>
+    <node x="182.0" y="-180.85045513654097">4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.users</node>
+    <node x="94.0" y="226.5">4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.goals</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.favorite_stories" target="4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.stories" relationship="REFERENCES">
+      <point x="-47.75" y="-73.5" />
+      <point x="-94.49577373211963" y="190.0" />
+      <point x="-56.94343302990899" y="190.0" />
+      <point x="0.0" y="73.5" />
+    </edge>
+    <edge source="4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.favorite_quotes" target="4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.users" relationship="REFERENCES">
+      <point x="-47.75" y="-73.5" />
+      <point x="595.6784785435631" y="190.0" />
+      <point x="295.0" y="190.0" />
+      <point x="0.0" y="165.5" />
+    </edge>
+    <edge source="4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.notes" target="4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.users" relationship="REFERENCES">
+      <point x="0.0" y="-73.5" />
+      <point x="416.46423927178154" y="190.0" />
+      <point x="295.0" y="190.0" />
+      <point x="0.0" y="165.5" />
+    </edge>
+    <edge source="4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.favorite_quotes" target="4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.quotes" relationship="REFERENCES">
+      <point x="47.75" y="-73.5" />
+      <point x="691.1784785435631" y="190.0" />
+      <point x="616.5" y="190.0" />
+      <point x="0.0" y="108.0" />
+    </edge>
+    <edge source="4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.favorite_stories" target="4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.users" relationship="REFERENCES">
+      <point x="47.75" y="-73.5" />
+      <point x="1.0042262678803695" y="190.0" />
+      <point x="295.0" y="190.0" />
+      <point x="0.0" y="165.5" />
+    </edge>
+    <edge source="4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.goals" target="4e48829a-835f-49a1-b0de-92d64ddc06e4.TABLE:y_style_new.public.users" relationship="REFERENCES">
+      <point x="0.0" y="-85.0" />
+      <point x="189.5" y="190.0" />
+      <point x="295.0" y="190.0" />
+      <point x="0.0" y="165.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.3467600700525395" showDependencies="false" x="305.113133940182" y="77.6976592977893" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Columns</Category>
+    <Category>Comments</Category>
+    <Category>Key columns</Category>
+    <Category>Virtual foreign keys</Category>
+  </Categories>
+</Diagram>
+

@@ -9,8 +9,8 @@ return new class extends Migration {
     {
         Schema::create('favorite_stories', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('story_id');
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
+            $table->foreignId('story_id')->constrained('stories')->cascadeOnDelete();
             $table->timestamps();
         });
     }
